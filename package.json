@@ -1,12 +1,14 @@
+
 {
-  "name": "data-viz",
+  "name": "post-1",
   "version": "1.0.0",
   "license": "MIT",
   "idyll": {
     "theme": "default",
     "layout": "centered",
     "css": "styles.css",
-    "authorView": false
+    "authorView": false,
+    "output": "docs/"
   },
   "dependencies": {
     "idyll": "^4.0.0",
