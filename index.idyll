@@ -1,17 +1,17 @@
-[meta title:"Data Viz" description:"Short description of your project" /]
+[meta title:"Narrative Visualization" description:"A Study in Racially Motivated Police Attacks" /]
 
 [Header
   fullWidth:true
-  title:"Data Viz"
-  subtitle:"Welcome to Idyll. Open index.idyll to start writing"
-  author:"Your Name Here"
+  title:"Narrative Visualization"
+  subtitle:"A Study in Racially Motivated Police Attacks"
+  author:"Aarushi Gupta, Aryan Adhlakha, Mayukh Mishra, Shubham Mehta"
   authorLink:"https://idyll-lang.org"
   date:`(new Date()).toDateString()`
   background:"#222222"
   color:"#ffffff"
    /]
 
-## Introduction
+## Introduction - To be modified by others
 
 This is an Idyll scrolly-telling post. It is generated via
 the file `index.idyll`. To compile this post using
@@ -24,11 +24,10 @@ Configuration can be done via the `idyll` field in `package.json`.
 
 [var name:"state" value:0 /]
 
-[Scroller currentStep:state]
 
-  [Graphic className:"d3-component-container"]
-    [CustomD3Component className:"d3-component" state:`state+1` /]
-  [/Graphic]
+  [div className:"inset"  style:`{maxWidth: 5000, margin: '0 auto'}`]
+    [CustomD3Component className:"d3-component" style:`{width: "100%"}`  /]
+  [/div]
 
   [Step]
 
@@ -117,7 +116,6 @@ Configuration can be done via the `idyll` field in `package.json`.
     ```
   [/Step]
 
-[/Scroller]
 
 [Scroller]
 

@@ -1,4 +1,3 @@
-
 {
   "name": "post-1",
   "version": "1.0.0",
@@ -13,7 +12,8 @@
   "dependencies": {
     "idyll": "^4.0.0",
     "idyll-d3-component": "^2.0.0",
-    "d3": "^4.0.0"
+    "d3": "^4.0.0",
+    "topojson": "1"
   },
   "devDependencies": {
     "gh-pages": "^0.12.0"
