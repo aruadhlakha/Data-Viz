@@ -18,9 +18,11 @@
     "d3-transition": "^2.0.0",
     "idyll": "^4.0.0",
     "idyll-d3-component": "^2.0.0",
+    "idyll-vega-lite": "^2.0.3",
+    "react-scripts": "^2.1.8",
     "topojson": "^1.6.27"
   },
   "devDependencies": {
-    "gh-pages": "^0.12.0"
+    "gh-pages": "^3.1.0"
   }
 }

@@ -24,10 +24,28 @@ Configuration can be done via the `idyll` field in `package.json`.
 
 [var name:"state" value:0 /]
 
+[IdyllVegaLite data:"data.csv" spec:`{
+mark: "line",
+encoding: {
+  x: {
+    field: "date",
+    type: "temporal",
+    axis: {title: "Year", format:"%Y"}
+  },
+  y: {
+    field: "count",
+    type: "quantitative",
+    axis: {title: "Number of deaths"},
+    scale: { domain: [0, 500] }
+  }
+},
+config: {
+  mark: {
+    color: "green"
+  }
+}
+}` /]
 
-  [div className:"inset"  style:`{maxWidth: 5000, margin: '0 auto'}`]
-    [CustomD3Component className:"d3-component" /]
-  [/div]
 
   [Step]
 
