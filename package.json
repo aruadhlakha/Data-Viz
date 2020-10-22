@@ -10,10 +10,15 @@
     "output": "docs/"
   },
   "dependencies": {
+    "d3": "^4.0.0",
+    "d3-composite-projections": "^1.4.0",
+    "d3-geo": "^2.0.1",
+    "d3-request": "^1.0.6",
+    "d3-selection": "^2.0.0",
+    "d3-transition": "^2.0.0",
     "idyll": "^4.0.0",
     "idyll-d3-component": "^2.0.0",
-    "d3": "^4.0.0",
-    "topojson": "1"
+    "topojson": "^1.6.27"
   },
   "devDependencies": {
     "gh-pages": "^0.12.0"

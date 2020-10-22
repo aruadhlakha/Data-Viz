@@ -26,7 +26,7 @@ Configuration can be done via the `idyll` field in `package.json`.
 
 
   [div className:"inset"  style:`{maxWidth: 5000, margin: '0 auto'}`]
-    [CustomD3Component className:"d3-component" style:`{width: "100%"}`  /]
+    [CustomD3Component className:"d3-component" /]
   [/div]
 
   [Step]
