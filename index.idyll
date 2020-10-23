@@ -132,7 +132,7 @@ encoding: {
 },
 config: {
   mark: {
-    color: "yellow"
+    color: "blue"
   }
 }
 }` /]
