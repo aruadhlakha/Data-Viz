@@ -1,0 +1,127 @@
+html {
+	scroll-behavior: smooth;
+}
+
+.article-header {
+	background: #222;
+	color: white;
+	text-align: center;
+	display: block;
+	padding-top: 8em;
+	padding-bottom: 4em;
+	margin-bottom: 4em;
+	margin-bottom: 45px;
+	text-align: center;
+}
+
+.article-header a {
+	color: white;
+	text-decoration: underline;
+}
+
+h1 {
+	font-weight: bold;
+	font-size: 24px;
+}
+h2 {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+	font-weight: lighter;
+	font-size: 18px;
+}
+
+.grid {
+	display: inline-grid;
+	padding-left: 10%;
+	padding-right: 50%;
+	grid-column-gap: 50%;
+	grid-template-columns: 2fr 2fr 2fr 2fr;
+}
+
+.header {
+	padding: 20px;
+	text-align: center;
+	background: #222222;
+	color: rgb(255, 255, 255);
+	font-size: 20px;
+	font-weight: bold;
+}
+
+.inPageLink {
+	display: flex;
+	padding-left: 25%;
+	padding-right: 25%;
+	justify-content: center;
+	align-items: center;
+	height: fit-content;
+	font-size: 20px;
+}
+
+p {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	/* text-indent: 50px; */
+	text-align: justify;
+	font-size: 18px;
+	padding-left: 25%;
+	padding-right: 25%;
+	padding-top: 1%;
+}
+
+/* .chart {
+	height: 600px;
+    width: 600px;
+} */
+
+.footnote {
+	/* outline-offset: 10px */
+	/* border-style: inset; */
+	margin: 5%;
+	padding-left: 20%;
+	padding-right: 20%;
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	/* text-indent: 50px; */
+	text-align: justify;
+	font-size: 18px;
+}
+
+.a {
+	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	/* text-indent: 50px; */
+	text-align: justify;
+	font-size: 18px;
+	padding-left: 15%;
+	padding-right: 15%;
+	padding-top: 1%;
+}
+
+#chart text {
+	fill: red;
+	font: 10px sans-serif;
+	text-anchor: end;
+}
+
+.axis text {
+	font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+	fill: none;
+	/*stroke: #fff;*/
+	shape-rendering: crispEdges;
+}
+
+body {
+	color: black;
+	background-color: white;
+	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI",
+		Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+		"Segoe UI Symbol";
+	font-size: 16px;
+}
+
+path {
+	stroke: steelblue;
+	stroke-width: 2;
+	fill: none;
+}

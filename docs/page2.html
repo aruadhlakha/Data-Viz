@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" href="./static/styles.css" />
+		<title>A3 Narrative Visualization - Dot.js</title>
+	</head>
+	<a id="intro"></a>
+
+	<body>
+		<div class="header">
+			<h1 style="font-weight: lighter">Analysis of States with the highest number of deaths</h1>
+			<!-- <div class = "grid" style="font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif">
+				<h2>Aarushi Gupta</h2>
+				<h2>Aryan Adhlakha</h2>
+				<h2>Mayukh Misra</h2>
+				<h2>Shubham Mehta</h2> -->
+			</div> 
+		</div>
+				<!-- <div class="article-header" stylesheet = "static/idyll_styles.css" style="background:#222222;color:#ffffff">
+					<h1 class="hed">Narrative Visualization</h1>
+					<h2 class="dek">A Study in Racially Motivated Police Attacks</h2>
+					<div class="byline">By: <span><a href="">Aarushi Gupta</a>, 
+					</span><span>
+						<a href="">Aryan Adhlakha</a>, 
+					</span><span>
+						<a href="">Mayukh Misra</a> and 
+					</span><span>
+						<a href="">Shubham Mehta</a></span>
+					</div>
+						<div class="idyll-pub-date">Fri Oct 23 2020</div></div>
+				</div> -->
+		<div class="intro">
+			<p>
+				This was an interesting topic to research becasue, as compared to
+				other high-income countries, United States of America has a
+				relatively high rate of police killings. It averages around 1000
+				killings per year. Recently, unethical police killings have been all
+				over the news and it has given rise to revolutionary movements such
+				as BLM. The analysis in this paper has been mainly drawn from a
+				police shooting database which has information such as race, age,
+				name, city, state of the person shot by police and some other
+				details. This paper is trying to figure the correlation between
+				these shootings and the factors that affect these police shootings.
+				According to that, we have isolated 4 different categories that
+				gives us some clarification about these shootings and it also helps
+				us analyze the trends in the dataset and draw conclusions from it.
+				<br><br>
+				California, Texas and Florida were the top 3 states in terms
+				of number of police shootings in 5 years. In order to learn more
+				about the number of shootings per city in these states, click on the
+				bar graph.
+			</p>
+			<p>
+				<div id="chart" style="height: 600px; width: 600px">
+					<div
+						class="innerCont"
+						style="
+							overflow: auto;
+							top: 100px;
+							left: 500px;
+							height: 91%;
+							width: 100%;
+							position: relative;
+							overflow: hidden;
+						"
+					></div>
+				</div>
+			</p>
+			<p>
+				This bar graph represents the cities in California, Florida, and
+				Texas, which had the maximum amount of shootings.
+			</p>
+			<div class="footnote" align="center">
+				US police murder rates are higher than in other developed countries.
+				<br />It is 4 times the rate in Canada, 22 times the rate in
+				Australia, 40 times the rate in Germany, and 125 times the rate in
+				England. Therefore, this makes it more important to investigate the
+				dataset and figure out what trends are observed in these shootings.
+				To start off, the dataset was divided into 5 different ethnicities
+				which considers White, Black, Hispanic, Asian, Natives and others.
+				The dataset ranges from January, 2015 to June, 2020. On first
+				glance, it shows that in these 5 years, white people account for
+				50.58% of police shootings, while Black, Hispanic, Asian and
+				Native people account for 26.51%, 18.42%, 1.8%, and 1.59% of
+				shootings respectively. Howsoever, we need to take into account the
+				proportion of white population compared to these racial groups when
+				evaluation these statistics. Therefore, this paper takes into
+				account 4 different categories to analyze the dataset and relate it
+				to the number of shootings in a state. Those categories are:-
+				<ul>
+					<li>Relating per capita income of a state.</li>
+					<li>Relating police funding of a state.</li>
+					<li>Considering the gun laws of a state.</li>
+					<li>
+						Considering age, gender, and race of a person to analyze the
+						trends.
+					</li>
+				</ul>
+				<p>
+					<button
+						class="inPageLink"
+						align="center"
+						onclick="window.location.href='/index.html'"
+					>
+						Go To Home Page
+					</button>
+				</p>
+			</div>
+			<!-- <a align="center" href="slider.html"
+				>Click here to learn more about the age trends in these shootings</a
+			> -->
+		</div>
+		<script
+			src="https://code.jquery.com/jquery-1.12.4.min.js"
+			charset="utf-8"
+		></script>
+	</body>
+	<div
+		class="footer"
+		style="font-size: 11px; font-family: 'Courier New', Courier, monospace"
+	>
+		<p></p>
+		created using D3.js, HTML, and CSS by Aarushi Gupta, Aryan Adhlakha,
+		Mayukh Misra and Shubham Mehta
+	</div>
+	<script src="https://d3js.org/d3.v2.min.js"></script>
+	<script src="static/elements.js"></script>
+</html>
