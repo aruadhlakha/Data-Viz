@@ -23,28 +23,148 @@ data-driven graphics.
 Configuration can be done via the `idyll` field in `package.json`.
 
 [var name:"state" value:0 /]
+[var name:"yStart" value:0 /]
+[var name:"color" value:"green" /]
+[data name:"shooting" source:"shooting.csv" /]
+[data name:"shootingBlack" source:"shootingBlack.csv" /]
+[data name:"shootingHispanic" source:"shootingHispanic.csv" /]
+[data name:"shootingNative" source:"shootingNative.csv" /]
+[data name:"shootingOther" source:"shootingOther.csv" /]
+[data name:"shootingAsian" source:"shootingAsian.csv" /]
 
-[IdyllVegaLite data:"data.csv" spec:`{
-mark: "line",
+
+[var name:"colorBy" value:`{}` /]
+[var name:"y" value:50 /]
+
+[IdyllVegaLite data:shooting spec:`{
+width: 500,
+height: 400,
+mark: "point",
 encoding: {
   x: {
     field: "date",
-    type: "temporal",
-    axis: {title: "Year", format:"%Y"}
+    type: "nominal",
+    axis: {title: "Year"}
   },
   y: {
     field: "count",
     type: "quantitative",
     axis: {title: "Number of deaths"},
-    scale: { domain: [0, 500] }
+    scale: { domain: [0,500] }
+  },
+  color: colorBy
+}
+}` /]
+
+Color by:
+ [button onClick:`colorBy = {}` ]None[/button]
+ [button onClick:`colorBy = {field: 'date', type: 'nominal'}` ]Year[/button]
+ [button onClick:`colorBy = {field: 'race', type: 'nominal'}` ]Race[/button]
+
+
+Killings per racial group:
+
+[IdyllVegaLite data:shootingBlack spec:`{
+width: 200,
+height: 200,
+mark: "line",
+encoding: {
+  x: {
+    field: "date",
+    type: "nominal",
+    axis: {title: "Year"}
+  },
+  y: {
+    field: "count",
+    type: "quantitative",
+    axis: {title: "Number of deaths of Blacks"},
+    scale: { domain: [100, 500-y] }
   }
 },
 config: {
   mark: {
-    color: "green"
+    color: "black"
   }
 }
 }` /]
+
+[IdyllVegaLite data:shootingHispanic spec:`{
+width: 200,
+height: 200,
+mark: "line",
+encoding: {
+  x: {
+    field: "date",
+    type: "nominal",
+    axis: {title: "Year"}
+  },
+  y: {
+    field: "count",
+    type: "quantitative",
+    axis: {title: "Number of deaths of Hispanics"},
+    scale: { domain: [0, 400-y] }
+  }
+},
+config: {
+  mark: {
+    color: "brown"
+  }
+}
+}` /]
+
+
+[IdyllVegaLite data:shootingAsian spec:`{
+width: 200,
+height: 200,
+mark: "line",
+encoding: {
+  x: {
+    field: "date",
+    type: "nominal",
+    axis: {title: "Year"}
+  },
+  y: {
+    field: "count",
+    type: "quantitative",
+    axis: {title: "Number of deaths of Asians"},
+    scale: { domain: [0, 230-y] }
+  }
+},
+config: {
+  mark: {
+    color: "yellow"
+  }
+}
+}` /]
+
+
+[IdyllVegaLite data:shootingNative spec:`{
+width: 200,
+height: 200,
+mark: "line",
+encoding: {
+  x: {
+    field: "date",
+    type: "nominal",
+    axis: {title: "Year"}
+  },
+  y: {
+    field: "count",
+    type: "quantitative",
+    axis: {title: "Number of deaths of Natives"},
+    scale: { domain: [0, 230-y] }
+  }
+},
+config: {
+  mark: {
+    color: "red"
+  }
+}
+}` /]
+
+Zoom in:
+0 [Range value:y min:0 max:200 /] 100
+
 
 
   [Step]

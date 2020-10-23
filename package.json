@@ -9,6 +9,15 @@
     "authorView": false,
     "output": "docs/"
   },
+  "loaders": [
+    {
+      "test": "/\\.js$/",
+      "loader": "babel",
+      "query": {
+        "compact": false
+      }
+    }
+  ],
   "dependencies": {
     "d3": "^4.0.0",
     "d3-composite-projections": "^1.4.0",
@@ -19,6 +28,7 @@
     "idyll": "^4.0.0",
     "idyll-d3-component": "^2.0.0",
     "idyll-vega-lite": "^2.0.3",
+    "react-router-dom": "^6.0.0-beta.0",
     "react-scripts": "^2.1.8",
     "topojson": "^1.6.27"
   },
