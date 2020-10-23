@@ -4,8 +4,19 @@
   fullWidth:true
   title:"Narrative Visualization"
   subtitle:"A Study in Racially Motivated Police Attacks"
-  author:"Aarushi Gupta, Aryan Adhlakha, Mayukh Mishra, Shubham Mehta"
-  authorLink:"https://idyll-lang.org"
+  authors:`[{
+    name: "Aarushi Gupta",
+    link: ""
+  }, {
+    name: "Aryan Adhlakha",
+    link: ""
+  }, {
+    name: "Mayukh Misra",
+    link: ""
+  }, {
+    name: "Shubham Mehta",
+    link: ""
+  }]`
   date:`(new Date()).toDateString()`
   background:"#222222"
   color:"#ffffff"
@@ -83,7 +94,7 @@ encoding: {
 },
 config: {
   mark: {
-    color: "black"
+    color: "grey"
   }
 }
 }` /]
