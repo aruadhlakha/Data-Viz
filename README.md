@@ -1,5 +1,3 @@
-# Visit the website on https://aruadhlakha.github.io/Data-Viz/
-
 # idyll-post
 
 Template for a single Idyll post.
