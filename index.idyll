@@ -22,6 +22,14 @@
   color:"#ffffff"
    /]
 
+
+[preload images:`['data/hello.png']` /]
+
+[aside]
+[iframe src:"image.html" width: 370 height: 270 /]
+[/aside]
+
+
 [section]
       #### “ On my honor, I will never betray my integrity, my character or the public trust. I will always have the courage to hold myself and others accountable for our actions. I will always maintain the highest ethical standards and uphold the values of my community, and the agency I serve. ”
       This is the oath that all Law Enforcement Officers in the United States must take before beginning duty.
@@ -54,7 +62,7 @@
 [/section]
 
 
-[var name:"state" value:0 /]
+
 [var name:"yStart" value:0 /]
 [var name:"color" value:"green" /]
 [data name:"shooting" source:"shooting.csv" /]
@@ -67,12 +75,12 @@
 [var name:"colorBy" value:`{}` /]
 [var name:"y" value:50 /]
 
-For a lot of people, this was the first time they witnessed something so brutal, and merciless. 
+For a lot of people, this was the first time they witnessed something so brutal, and merciless.
 This excessive use of force by law enforcement officers is not news for a lot of people of color.
 
   [section]
     [img src:"./img/donutchart.png" /]
-    The graph above clearly shows that a disproportionate number of black people are killed by law enforcement officers. 
+    The graph above clearly shows that a disproportionate number of black people are killed by law enforcement officers.
     This calls into question the training, and motives behind the huge number of deaths to begin with.
   [/section]
 
@@ -98,14 +106,14 @@ Let us take a look at the overall distribution of police shootings in the United
 
 US police murder rates are higher than in other developed countries, it is 4 times the rate in Canada, 22 times the rate in Australia, 40 times the rate in Germany, and 125 times the rate in England.
 [br/][br/]
-  The graph below shows the numbers for three states with the highest shootings in the country. Coincidentally, these states also happen to have some of the highest 
+  The graph below shows the numbers for three states with the highest shootings in the country. Coincidentally, these states also happen to have some of the highest
   percentages of minorites in the state.
   [b] Clicking [/b] on the graph shows you the the same breakdown for the top four cities in the state.
   [iframe src:"page2.html" width: 600 height: 690 /]
 
-  Every year in the United States, the police kill approximately 1000 people. 
+  Every year in the United States, the police kill approximately 1000 people.
   This number is not significantly affected by any other factors, and as we can see in the graph below, it also has an almost consistent racial breakdown.
-  
+
     [section]
 
       Killings per racial group:
@@ -242,8 +250,8 @@ Looking at the trends from the last few years, we can see that there does not se
     [button onClick:`colorBy = {field: 'race', type: 'nominal'}` ]Race[/button]
   [/section]
 
-As we have seen over the course of 5 years in this data, the amount of shootings by police officer has been constant and has not really changed. 
-Our analysis shows that there are a lot of variations in the trends that cannot be accounted for. 
+As we have seen over the course of 5 years in this data, the amount of shootings by police officer has been constant and has not really changed.
+Our analysis shows that there are a lot of variations in the trends that cannot be accounted for.
 The correlation to age and race of the victims are two factors we looked at closely.
 While there have been steps taken to mitigate these worrying statistics, it is evident that it has not worked.
 In the wake of reinvigorated movements like the Black Lives Matter movement, we can hope to see a new set of actions being taken that directly address the problems at the root.
@@ -296,13 +304,23 @@ QUESTION 4: Which year among those listed had the highest number of Native Ameri
 [Boolean value:myVar12 /]
 [Display value:`myVar12 ? "Correct Answer" : "2017"  `/][br/]
 
-QUESTION 5: What is a state in US ?[br/]
+QUESTION 5: Which age group has a greater proportion of black people shooted than whites?[br/]
 [var name:"myVar13" value:false /]
 [Boolean value:myVar13 /]
-[Display value:`myVar13 ? "Correct Answer" : "put correct answer here" `/][br/]
+[Display value:`myVar13 ? "Correct Answer" : "<25" `/][br/]
 [var name:"myVar14" value:false /]
 [Boolean value:myVar14 /]
-[Display value:`myVar14 ? "Wrong Answer" : "put wrong here"  `/][br/]
+[Display value:`myVar14 ? "Wrong Answer" : ">30"  `/][br/]
 [var name:"myVar15" value:false /]
 [Boolean value:myVar15 /]
-[Display value:`myVar15 ? "Wrong Answer" : "put wrong here"  `/][br/]
+[Display value:`myVar15 ? "Wrong Answer" : ">15"  `/][br/]
+
+[section]
+[br/]
+[i]
+This document was created with [link href:"https://idyll-lang.github.io/idyll/" text:"Idyll" /], a new markup language for
+creating interactive documents. Project submitted by Aarushi Gupta, Shubham Mehta, Aryan Adhlakha, and Mayukh Misra
+for Computer Science 639: Data Visualization
+[/i]
+
+[/section]
