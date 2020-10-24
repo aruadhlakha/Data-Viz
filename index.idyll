@@ -22,19 +22,37 @@
   color:"#ffffff"
    /]
 
-## Introduction - To be modified by others
+[section]
+      #### “ On my honor, I will never betray my integrity, my character or the public trust. I will always have the courage to hold myself and others accountable for our actions. I will always maintain the highest ethical standards and uphold the values of my community, and the agency I serve. ”
+      This is the oath that all Law Enforcement Officers in the United States must take before beginning duty.
+      [br/]
+      [br/]
+      Compared to other high-income countries, the United States of America has a much higher rate of police killings.
+      It averages around 1000 police killings a year. For such a high number of people dead, there is bound to be some scrutiny in the practices of law enforcement that leads to such actions.
+      Recently, the unethical practices of local police departments have come under fire because of collective outrage of the people.
 
-This is an Idyll scrolly-telling post. It is generated via
-the file `index.idyll`. To compile this post using
-idyll, run the command `idyll` inside of this directory.
+      On May 25th, 2020, a bystander's viral clip showed us this harrowing exchange between 3 police offers,
+      and George Floyd. The extremely graphic video was widely circulated on the internet and television news.
+      [br/]
+      [br/]
+      [small]
+      [i] -I’m claustrophobic. My stomach hurts.[/i][br/]
+      [b] -Uh-huh[/b][br/]
+      [i] -Everything hurt. I need some water or something. Please. Please. I can’t breathe, officer.[/i][br/]
+      [b] -You’re doing a lot of talking, a lot of yelling.[/b][br/]
+      [i] -They going to kill me. They’re going to kill me, man.[/i][br/]
+      [b] -Takes a heck of a lot of oxygen to say that.[/b][br/]
+      [i] -I cannot breathe. I cannot breathe. Please, sir. Please.[/i][br/]
+      [b] -You want him on his side? [/b][br/]
+      [b] -No, leave him. Staying put where we got him. [/b][br/]
+      -He’s not breathing right, man. [br/]
+      [b] -That why we got the ambulance coming. That’s fine.[/b][br/]
+      [/small]
 
-Idyll posts are designed to support interaction and
-data-driven graphics.
+      [br/]
+      [br/]
+[/section]
 
-Configuration can be done via the `idyll` field in `package.json`.
-
-
-[Go To Next Page To See an Interactive Bar Chart](page2.html)
 
 [var name:"state" value:0 /]
 [var name:"yStart" value:0 /]
@@ -46,274 +64,245 @@ Configuration can be done via the `idyll` field in `package.json`.
 [data name:"shootingOther" source:"shootingOther.csv" /]
 [data name:"shootingAsian" source:"shootingAsian.csv" /]
 
-
 [var name:"colorBy" value:`{}` /]
 [var name:"y" value:50 /]
 
-[IdyllVegaLite data:shooting spec:`{
-width: 500,
-height: 400,
-mark: "point",
-encoding: {
-  x: {
-    field: "date",
-    type: "nominal",
-    axis: {title: "Year"}
-  },
-  y: {
-    field: "count",
-    type: "quantitative",
-    axis: {title: "Number of deaths"},
-    scale: { domain: [0,500] }
-  },
-  color: colorBy
-}
-}` /]
-
-Color by:
- [button onClick:`colorBy = {}` ]None[/button]
- [button onClick:`colorBy = {field: 'date', type: 'nominal'}` ]Year[/button]
- [button onClick:`colorBy = {field: 'race', type: 'nominal'}` ]Race[/button]
-
-
-Killings per racial group:
-
-[IdyllVegaLite data:shootingBlack spec:`{
-width: 200,
-height: 200,
-mark: "line",
-encoding: {
-  x: {
-    field: "date",
-    type: "nominal",
-    axis: {title: "Year"}
-  },
-  y: {
-    field: "count",
-    type: "quantitative",
-    axis: {title: "Number of deaths of Blacks"},
-    scale: { domain: [100, 500-y] }
-  }
-},
-config: {
-  mark: {
-    color: "grey"
-  }
-}
-}` /]
-
-[IdyllVegaLite data:shootingHispanic spec:`{
-width: 200,
-height: 200,
-mark: "line",
-encoding: {
-  x: {
-    field: "date",
-    type: "nominal",
-    axis: {title: "Year"}
-  },
-  y: {
-    field: "count",
-    type: "quantitative",
-    axis: {title: "Number of deaths of Hispanics"},
-    scale: { domain: [0, 400-y] }
-  }
-},
-config: {
-  mark: {
-    color: "brown"
-  }
-}
-}` /]
-
-
-[IdyllVegaLite data:shootingAsian spec:`{
-width: 200,
-height: 200,
-mark: "line",
-encoding: {
-  x: {
-    field: "date",
-    type: "nominal",
-    axis: {title: "Year"}
-  },
-  y: {
-    field: "count",
-    type: "quantitative",
-    axis: {title: "Number of deaths of Asians"},
-    scale: { domain: [0, 230-y] }
-  }
-},
-config: {
-  mark: {
-    color: "blue"
-  }
-}
-}` /]
-
-
-[IdyllVegaLite data:shootingNative spec:`{
-width: 200,
-height: 200,
-mark: "line",
-encoding: {
-  x: {
-    field: "date",
-    type: "nominal",
-    axis: {title: "Year"}
-  },
-  y: {
-    field: "count",
-    type: "quantitative",
-    axis: {title: "Number of deaths of Natives"},
-    scale: { domain: [0, 230-y] }
-  }
-},
-config: {
-  mark: {
-    color: "red"
-  }
-}
-}` /]
-
-Zoom in:
-0 [Range value:y min:0 max:200 /] 100
-
-
-
-  [Step]
-
-    ## Markup
-
-    Idyll is based on Markdown.
-
-    You can use familiar syntax
-    to create **bold** (`**bold**` ) and *italic* (`*italic*` ) styles,
-
-* lists
-* of
-* items,
-
-    ```
-    * lists
-    * of
-    * items,
-    ```
-
-1. and numbered
-2. lists
-3. of items,
-
-
-    ```
-    1. and numbered
-    2. lists
-    3. of items,
-    ```
-
-    in addition to [hyperlinks](https://idyll-lang.org) and images:
-
-    ![quill](static/images/quill.svg)
-
-    ```
-    ![quill](static/images/quill.svg)
-    ```
-  [/Step]
-
-  [Step]
-    ## Components
-
-    Components can be embedded using a bracket syntax:
-
-    ```
-    [Range /]
-    ```
-
-    and can contain nested content:
-
-    ```
-    [Equation]e = mc^{2}[/Equation]
-    ```
-
-    Components accept properties:
-
-    ```
-    [Range value:x min:0 max:1 /]
-    ```
-
-    that can be bound to variables to achieve interactivity (more in next section).
-
-
-    A variety of components are included by default. See [all the available components](https://idyll-lang.org/docs/components/). You can also use any html tag, for example: `[div] A div! [/div]`.
-
-    To create your own, add it to the `components/` folder. There are examples of how to use Idyll with React and D3 based components already included.
-
-  [/Step]
-
-  [Step]
-    ## Interactivity
-
-    Here is how you can instantiate a variable and bind it to a component:
-
-    [var name:"exampleVar" value:5 /]
-
-    [Range min:0 max:10 value:exampleVar /]
-    [Display value:exampleVar /]
-
-    ```
-    [var name:"exampleVar" value:5 /]
-
-    [Range min:0 max:10 value:exampleVar /]
-    [Display value:exampleVar /]
-    ```
-  [/Step]
-
-
-[Scroller]
-
-  [Step]
-
-    ##Scroller
-
-    The `Scroller` component is used to create scroll-based presentations. It can be used to create scrollytelling articles similar to this.
-    It takes a property `currentStep` which is updated when the user scrolls to a different step.
-
-    A persistent graphic may also provided using the `Graphic` component in order to create visualizations.
-
-  [/Step]
-
-  [Step]
-
-    ## Learn More
-
-    To learn more see the documentation at [https://idyll-lang.org/docs/](https://idyll-lang.org/docs/),
-    join our [chatroom](https://gitter.im/idyll-lang/Lobby), or see the project on [GitHub](https://github.com/idyll-lang/idyll).
-  [hr /]
-
-  [/Step]
-
-[/Scroller]
-
-[br/]
-# Technical Details
-
-## Installation
-
-- Make sure you have `idyll` installed (`npm i -g idyll`).
-- Clone this repo and run `npm install`.
-
-## Developing a post locally
-
-Run `idyll`.
-
-## Building a post for production
-
-Run `idyll build`. The output will appear in the top-level `build` folder. To change the output location, change the `output` option in `package.json`.
-
-## Deploying
-
-Make sure your post has been built, then deploy the docs folder via any static hosting service.
-
-## Dependencies
-
-You can install custom dependencies by running `npm install <package-name> --save`. Note that any collaborators will also need download the package locally by running `npm install` after pulling the changes.
+For a lot of people, this was the first time they witnessed something so brutal, and merciless. 
+This excessive use of force by law enforcement officers is not news for a lot of people of color.
+
+  [section]
+    [img src:"./img/donutchart.png" /]
+    The graph above clearly shows that a disproportionate number of black people are killed by law enforcement officers. 
+    This calls into question the training, and motives behind the huge number of deaths to begin with.
+  [/section]
+
+Here we take a closer look at the comparison between police killing black and white people and their age groups respectively.
+  [section]
+    [img height: 600 src:"./img/AgeComparison.png" /]
+  [/section]
+  There seems to be a very high correlation between police shooting young black youth compared to young white youth. This is despite the data not accounting for racial population differences.
+
+[section]
+    The chart below shows how many people were killed while the police officer had a bodycam active (outside) vs the total number of shootings (inside)
+    [img src:"./img/bodycam.png" /]
+    These statistics show a troubling increase in the number of black people killed particularly in the case when there are no bodycams active.
+    [br/] This implies a correlation between the bodycams and reducing the number of wonton deaths due to abusive police officers.
+  [/section]
+
+
+Let us take a look at the overall distribution of police shootings in the United States.
+  [section]
+    [img src:"./img/Map.png" /]
+    The highest population states do indeed have higher numbers of police shootings, but it is interesting to look at the racial composition of them as well.
+  [/section]
+
+US police murder rates are higher than in other developed countries, it is 4 times the rate in Canada, 22 times the rate in Australia, 40 times the rate in Germany, and 125 times the rate in England.
+[br/][br/]
+  The graph below shows the numbers for three states with the highest shootings in the country. Coincidentally, these states also happen to have some of the highest 
+  percentages of minorites in the state.
+  [b] Clicking [/b] on the graph shows you the the same breakdown for the top four cities in the state.
+  [iframe src:"page2.html" width: 600 height: 690 /]
+
+  Every year in the United States, the police kill approximately 1000 people. 
+  This number is not significantly affected by any other factors, and as we can see in the graph below, it also has an almost consistent racial breakdown.
+  
+    [section]
+
+      Killings per racial group:
+
+      [IdyllVegaLite data:shootingBlack spec:`{
+      width: 200,
+      height: 200,
+      mark: "line",
+      encoding: {
+        x: {
+          field: "date",
+          type: "nominal",
+          axis: {title: "Year"}
+        },
+        y: {
+          field: "count",
+          type: "quantitative",
+          axis: {title: "Number of deaths of Blacks"},
+          scale: { domain: [100, 500-y] }
+        }
+      },
+      config: {
+        mark: {
+          color: "grey"
+        }
+      }
+      }` /]
+
+      [IdyllVegaLite data:shootingHispanic spec:`{
+      width: 200,
+      height: 200,
+      mark: "line",
+      encoding: {
+        x: {
+          field: "date",
+          type: "nominal",
+          axis: {title: "Year"}
+        },
+        y: {
+          field: "count",
+          type: "quantitative",
+          axis: {title: "Number of deaths of Hispanics"},
+          scale: { domain: [0, 400-y] }
+        }
+      },
+      config: {
+        mark: {
+          color: "brown"
+        }
+      }
+      }` /]
+
+      [IdyllVegaLite data:shootingAsian spec:`{
+      width: 200,
+      height: 200,
+      mark: "line",
+      encoding: {
+        x: {
+          field: "date",
+          type: "nominal",
+          axis: {title: "Year"}
+        },
+        y: {
+          field: "count",
+          type: "quantitative",
+          axis: {title: "Number of deaths of Asians"},
+          scale: { domain: [0, 230-y] }
+        }
+      },
+      config: {
+        mark: {
+          color: "blue"
+        }
+      }
+      }` /]
+
+
+      [IdyllVegaLite data:shootingNative spec:`{
+      width: 200,
+      height: 200,
+      mark: "line",
+      encoding: {
+        x: {
+          field: "date",
+          type: "nominal",
+          axis: {title: "Year"}
+        },
+        y: {
+          field: "count",
+          type: "quantitative",
+          axis: {title: "Number of deaths of Natives"},
+          scale: { domain: [0, 230-y] }
+        }
+      },
+      config: {
+        mark: {
+          color: "red"
+        }
+      }
+      }` /]
+
+      Zoom in:
+      0 [Range value:y min:0 max:200 /] 100
+
+    [/section]
+
+
+Looking at the trends from the last few years, we can see that there does not seem to be any noticeable difference in the number of police shootings despite many reforms and attempts to curb these instances of abuse of power.
+
+  [section]
+    [IdyllVegaLite data:shooting spec:`{
+    width: 500,
+    height: 400,
+    mark: "point",
+    encoding: {
+      x: {
+        field: "date",
+        type: "nominal",
+        axis: {title: "Year"}
+      },
+      y: {
+        field: "count",
+        type: "quantitative",
+        axis: {title: "Number of deaths"},
+        scale: { domain: [0,500] }
+      },
+      color: colorBy
+    }
+    }` /]
+
+    Color by:
+    [button onClick:`colorBy = {}` ]None[/button]
+    [button onClick:`colorBy = {field: 'date', type: 'nominal'}` ]Year[/button]
+    [button onClick:`colorBy = {field: 'race', type: 'nominal'}` ]Race[/button]
+  [/section]
+
+As we have seen over the course of 5 years in this data, the amount of shootings by police officer has been constant and has not really changed. 
+Our analysis shows that there are a lot of variations in the trends that cannot be accounted for. 
+The correlation to age and race of the victims are two factors we looked at closely.
+While there have been steps taken to mitigate these worrying statistics, it is evident that it has not worked.
+In the wake of reinvigorated movements like the Black Lives Matter movement, we can hope to see a new set of actions being taken that directly address the problems at the root.
+[br/]From our analysis, we suggest the increased use of bodycams, as our data suggests a lower rate of police shootings when officers use bodycams.
+
+
+## Test yourself
+
+QUESTION 1: How many people were shot by Police in San Antonio, Texas?[br/]
+[var name:"myVar1" value:false /]
+[Boolean value:myVar1 /]
+[Display value:`myVar1 ? "Correct Answer" : "40"  `/][br/]
+[var name:"myVar2" value:false /]
+[Boolean value:myVar2 /]
+[Display value:`myVar2 ? "Wrong Answer" : "62"  `/][br/]
+[var name:"myVar3" value:false /]
+[Boolean value:myVar3 /]
+[Display value:`myVar3 ? "Wrong Answer" : "24"  `/][br/]
+
+QUESTION 2: What percent of Hispanic people were shot by Police?[br/]
+[var name:"myVar4" value:false /]
+[Boolean value:myVar4 /]
+[Display value:`myVar4 ? "Wrong Answer" : "13.4%"  `/][br/]
+[var name:"myVar5" value:false /]
+[Boolean value:myVar5 /]
+[Display value:`myVar5 ? "Correct Answer" : "18.5%"  `/][br/]
+[var name:"myVar6" value:false /]
+[Boolean value:myVar6 /]
+[Display value:`myVar6 ? "Wrong Answer" : "18.42% "  `/][br/]
+
+QUESTION 3: What is a state in US ?[br/]
+[var name:"myVar7" value:false /]
+[Boolean value:myVar7 /]
+[Display value:`myVar7 ? "Wrong Answer" : "wrong here"  `/][br/]
+[var name:"myVar8" value:false /]
+[Boolean value:myVar8 /]
+[Display value:`myVar8 ? "Correct Answer" : "put correct answer here"  `/][br/]
+[var name:"myVar9" value:false /]
+[Boolean value:myVar9 /]
+[Display value:`myVar9 ? "Wrong Answer" : "put wrong here"  `/][br/]
+
+QUESTION 4: What is a state in US ?[br/]
+[var name:"myVar10" value:false /]
+[Boolean value:myVar10 /]
+[Display value:`myVar10 ? "Wrong Answer" : "wrong here"  `/][br/]
+[var name:"myVar11" value:false /]
+[Boolean value:myVar11 /]
+[Display value:`myVar11 ? "Wrong Answer" : "wrong here"  `/][br/]
+[var name:"myVar12" value:false /]
+[Boolean value:myVar12 /]
+[Display value:`myVar12 ? "Correct Answer" : "put correct answer here"  `/][br/]
+
+QUESTION 5: What is a state in US ?[br/]
+[var name:"myVar13" value:false /]
+[Boolean value:myVar13 /]
+[Display value:`myVar13 ? "Correct Answer" : "put correct answer here" `/][br/]
+[var name:"myVar14" value:false /]
+[Boolean value:myVar14 /]
+[Display value:`myVar14 ? "Wrong Answer" : "put wrong here"  `/][br/]
+[var name:"myVar15" value:false /]
+[Boolean value:myVar15 /]
+[Display value:`myVar15 ? "Wrong Answer" : "put wrong here"  `/][br/]
